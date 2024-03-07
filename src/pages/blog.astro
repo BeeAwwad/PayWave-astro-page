@@ -8,12 +8,12 @@ const pageTitle = "My Astro Learning Blog"
 <BaseLayout pageTitle={pageTitle}>
   <Fragment slot="body">
     <p>This is where I will post about my journey learning Astro.</p>
-    <ul>
+    <menu>
       {
         allPosts.map((post) => (
           <BlogPost url={post.url} title={post.frontmatter.title} />
         ))
       }
-    </ul>
+    </menu>
   </Fragment>
 </BaseLayout>

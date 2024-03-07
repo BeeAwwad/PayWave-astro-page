@@ -31,12 +31,12 @@ console.log("[tags].astro page!")
 <BaseLayout pageTitle={tag}>
   <Fragment slot="body">
     <p>Posts tagged with {tag}</p>
-    <ul>
+    <menu>
       {
         posts.map((post) => (
           <BlogPost url={post.url} title={post.frontmatter.title} />
         ))
       }
-    </ul>
+    </menu>
   </Fragment>
 </BaseLayout>
