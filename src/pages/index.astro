@@ -1,10 +1,12 @@
 ---
 import BaseLayout from "../layouts/baseLayout.astro"
-const pageTitle = "First Home Page"
+import Greeting from "../components/react/Greeting"
+const pageTitle = "Home Page"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <Fragment slot="body">
     <h2>My awesome blog subtitle</h2>
+    <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
   </Fragment>
 </BaseLayout>
