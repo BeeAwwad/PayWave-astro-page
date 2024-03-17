@@ -1,12 +1,7 @@
 ---
-import BaseLayout from "../layouts/baseLayout.astro"
-import Greeting from "../components/react/Greeting"
+import HeaderComponent from "@/components/react/header/header"
 const pageTitle = "Home Page"
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <Fragment slot="body">
-    <h2>My awesome blog subtitle</h2>
-    <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
-  </Fragment>
-</BaseLayout>
+<HeaderComponent client:load />
+<h1>{pageTitle}</h1>
