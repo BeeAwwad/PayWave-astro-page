@@ -1,0 +1,15 @@
+---
+import Logo from "./react/header/logo"
+import CtaButtons from "./react/header/ctaButtons"
+import { NavList } from "./react/header/navList"
+---
+
+<header>
+  <nav
+    class="flex justify-between items-center px-10 lg:px-32 font-poppins shadow-md h-16"
+  >
+    <Logo />
+    <NavList client:load />
+    <CtaButtons client:load />
+  </nav>
+</header>
