@@ -32,10 +32,12 @@ function CtaButtons() {
         </Sheet>
       </div>
       <div className="hidden lg:flex lg:space-x-4">
-        <Button className="text-md" variant="ghost">
+        <Button className="text-base ease-in" variant="ghost">
           Login
         </Button>
-        <Button className="text-md bg-[#002C6E]">Get the App</Button>
+        <Button className="text-base bg-[#002C6E] hover:bg-[#327CEB] ease-in">
+          Get the App
+        </Button>
       </div>
     </div>
   )
