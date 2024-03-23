@@ -42,7 +42,9 @@ export function NavList() {
     <NavigationMenu>
       <NavigationMenuList className="hidden lg:flex space-x-4">
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Company</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-base">
+            Company
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -77,7 +79,9 @@ export function NavList() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Features</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-base">
+            Features
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {features.map((feature) => (
@@ -90,14 +94,14 @@ export function NavList() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink>
-            <a className="text-lg font-medium ml-6" href="/">
+            <a className="text-base font-medium ml-6" href="/">
               Support
             </a>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink>
-            <a className="text-lg font-medium ml-6" href="/">
+            <a className="text-base font-medium ml-6" href="/">
               Contact
             </a>
           </NavigationMenuLink>

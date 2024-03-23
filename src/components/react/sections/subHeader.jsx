@@ -4,10 +4,10 @@ function SubHeader({ children, header, paragraph }) {
       <span className="text-[#327CEB] text-base lg:text-lg font-semibold">
         {children}
       </span>
-      <h2 className="mt-3 text-2xl md:text-3xl lg:text-4xl font-semibold">
+      <h2 className="mt-4 text-2xl md:text-3xl lg:text-4xl font-semibold">
         {header}
       </h2>
-      <p className="mt-3 text-base lg:text-lg">{paragraph}</p>
+      <p className="mt-3 text-base font-medium lg:text-lg">{paragraph}</p>
     </div>
   )
 }

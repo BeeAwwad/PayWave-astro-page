@@ -28,8 +28,18 @@ function SectionTwo() {
             Sign up now
           </Button>
         </div>
-        <div></div>
-        <div></div>
+        <div>
+          <p>
+            Stay connect at all times when you buy Airtime and renew your Data
+            Bundles on paywave.
+          </p>
+        </div>
+        <div>
+          <p>
+            Never default on your bills with paywave’s easy access to utility
+            bill payment.
+          </p>
+        </div>
       </div>
     </>
   )
