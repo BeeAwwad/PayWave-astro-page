@@ -18,7 +18,7 @@ function SectionTwo() {
         <h3>Payments</h3>
       </SubHeader>
       <div className="grid grid-cols-1 md:grid-cols-2 md:grid-row-2 mx-5 md:mx-16 xl:mx-48 font-poppins gap-6">
-        <div className="md:col-span-2 bg-[url('/images/section/section-2-sm.png')] md:bg-[url('/images/section/section-2.png')] bg-no-repeat bg-center text-white rounded-3xl p-6 md:py-20">
+        <div className="md:col-span-2 bg-[url('/images/section/section-2/section-2-sm.png')] md:bg-[url('/images/section/section-2/section-2.png')] bg-no-repeat bg-center bg-cover text-white rounded-3xl p-6 md:py-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mt-6 max-w-[600px]">
             Unified payment platform for all your finances
           </h2>

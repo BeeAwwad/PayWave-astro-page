@@ -5,7 +5,7 @@ function SectionOne() {
       <div className="hidden md:block flex-1">
         <img
           className="w-full h-full object-contain"
-          src="/images/section/section-1.png"
+          src="/images/section/section-1/section-1.png"
           alt="mobile_app_image"
         />
       </div>
