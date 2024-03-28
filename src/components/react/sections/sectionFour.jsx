@@ -1,7 +1,8 @@
 import SubHeader from "./subHeader"
 import Card from "../card"
-import { calcLength, motion, useScroll, useTransform } from "framer-motion"
+import { motion, useScroll } from "framer-motion"
 import { useEffect, useRef } from "react"
+import Lenis from "@studio-freight/lenis"
 
 function sectionFour() {
   const subHeaderContent = [
@@ -39,12 +40,19 @@ function sectionFour() {
   const container = useRef(null)
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start start", "end start"],
+    offset: ["start start", "end end"],
   })
 
   useEffect(() => {
-    scrollYProgress.on("change", (e) => console.log(scrollYProgress.current))
-  })
+    const lenis = new Lenis()
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  }, [])
   return (
     <>
       <SubHeader
@@ -66,7 +74,7 @@ function sectionFour() {
               key={index}
               idx={index}
               {...card}
-              range={[index * 0.25, 1]}
+              range={[index * 0.33333333, 0.9994846619281572]}
               progress={scrollYProgress}
               targetScale={targetScale}
             />
