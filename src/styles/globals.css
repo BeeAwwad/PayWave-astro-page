@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .qr-code {
   position: absolute;
   background: url("/images/section/section-3/section-3-qrcode2.svg") no-repeat;

@@ -11,7 +11,7 @@ const AccordionItem = React.forwardRef(({ className, open, ...props }, ref) => (
     ref={ref}
     className={cn(
       "border-b", // Maintain border for visual separation
-      open ? "bg-[#327CEB] text-white" : "", // Apply styles when open
+      open ? "bg-[#327CEB] text-white" : "", // Apply styles only when open
       className // User-provided class (optional)
     )}
     {...props}

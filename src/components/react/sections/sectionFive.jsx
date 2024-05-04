@@ -8,8 +8,13 @@ import { useState } from "react"
 
 function sectionFive() {
   const [activeItem, setActiveItem] = useState("")
+
+  const handleAccordionClick = (itemValue) => {
+    setActiveItem((prevItem) => (prevItem === itemValue ? "" : itemValue))
+  }
+
   return (
-    <section className="font-poppins mt-16 mx-5 md:mx-16 xl:mx-48">
+    <section className="font-poppins my-16 mx-5 md:mx-16 xl:mx-48">
       <h2 className="mb-4 text-4xl font-semibold text-center max-w-[600px] mx-auto">
         Frequently Asked Questions
       </h2>
@@ -22,7 +27,7 @@ function sectionFive() {
         >
           <AccordionTrigger
             className="hover:no-underline text-lg"
-            onClick={() => setActiveItem("item-1")}
+            onClick={() => handleAccordionClick("item-1")}
           >
             What is Paywave?
           </AccordionTrigger>
@@ -37,7 +42,7 @@ function sectionFive() {
         >
           <AccordionTrigger
             className="hover:no-underline text-lg"
-            onClick={() => setActiveItem("item-2")}
+            onClick={() => handleAccordionClick("item-2")}
           >
             Who is Paywave?
           </AccordionTrigger>
@@ -53,7 +58,7 @@ function sectionFive() {
         >
           <AccordionTrigger
             className="hover:no-underline text-lg"
-            onClick={() => setActiveItem("item-3")}
+            onClick={() => handleAccordionClick("item-3")}
           >
             When is Paywave?
           </AccordionTrigger>
@@ -68,7 +73,7 @@ function sectionFive() {
         >
           <AccordionTrigger
             className="hover:no-underline text-lg"
-            onClick={() => setActiveItem("item-4")}
+            onClick={() => handleAccordionClick("item-4")}
           >
             Why is Paywave?
           </AccordionTrigger>
