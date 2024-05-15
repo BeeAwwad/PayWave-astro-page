@@ -1,15 +1,19 @@
 ---
+import SectionZero from "../react/sections/sectionZero"
 import SectionOne from "../react/sections/sectionOne"
 import SectionTwo from "../react/sections/sectionTwo"
 import SectionThree from "../react/sections/sectionThree"
 import SectionFour from "../react/sections/sectionFour"
 import SectionFive from "../react/sections/sectionFive"
+import SectionSix from "../react/sections/sectionSix"
 ---
 
-<main class="mx-auto md:mx-10">
+<main class="">
   <SectionOne />
+  <SectionZero />
   <SectionTwo />
   <SectionThree />
-  <SectionFour client:idle />
+  <SectionFour client:load />
   <SectionFive client:idle />
+  <SectionSix />
 </main>
