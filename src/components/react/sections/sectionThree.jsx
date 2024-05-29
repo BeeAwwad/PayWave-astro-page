@@ -26,7 +26,7 @@ function sectionThree() {
       </h2>
       <section className="bg-[#002C6E] font-poppins p-10 mt-9 md:mx-16 xl:mx-48 md:rounded-2xl h-[620px] pt-32">
         <div className="flex flex-col items-center justify-center">
-          <p className="text-white text-center text-xl max-w-[400px]">
+          <p className="text-white text-center text-xl md:text-4xl lg:text-5xl max-w-[400px] md:max-w-[500px] lg:max-w-[650px]">
             Recieve payments from your customers
             <span className="text-[#327CEB] italic"> Instantly </span>
             with QR pay or Merchant ID

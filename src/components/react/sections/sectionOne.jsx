@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 function SectionOne() {
   return (
     <section>
-      <div className="md:flex md:flex-row mb-10 md:mb-0 mx-12 h-fit font-poppins">
+      <div className="md:flex md:flex-row mb-10 md:mb-0 px-5 sm:mx-12 h-fit font-poppins">
         <div className="hidden md:block flex-1">
           <img
             className="w-full h-full object-contain"
@@ -18,7 +18,7 @@ function SectionOne() {
             Manage all your transactions on one platform. instant, unified and
             simple with Paywave
           </p>
-          <div className="flex mt-12">
+          <div className="flex justify-center sm:justify-start mt-12">
             <Button className="text-base text-[#002C6E] bg-white border-[#002C6E] border-2 hover:bg-[#327CEB] hover:border-[#327CEB] hover:text-white ease-in">
               Open an account
             </Button>

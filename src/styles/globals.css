@@ -52,3 +52,13 @@
     top: calc(100% - 10px);
   }
 }
+
+/* Image Blur Styles */
+
+.blur-load {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* filter: blur(10px);
+  -webkit-filter: blur(10px) */
+}
