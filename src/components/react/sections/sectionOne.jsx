@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 function SectionOne() {
   return (
     <section>
-      <div className="md:flex md:flex-row mt-10 mb-10 md:mb-0 mx-12 h-fit font-poppins">
+      <div className="md:flex md:flex-row mb-10 md:mb-0 mx-12 h-fit font-poppins">
         <div className="hidden md:block flex-1">
           <img
             className="w-full h-full object-contain"

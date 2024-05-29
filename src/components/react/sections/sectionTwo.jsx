@@ -30,8 +30,8 @@ function SectionTwo() {
             Sign up now
           </Button>
         </div>
-        <div className="bg-[#F6F9FF] h-72 flex justify-center items-center p-4  rounded-3xl">
-          <p className="md:text-lg max-w-[550px]">
+        <div className="bg-[#F6F9FF] h-72 flex p-4  rounded-3xl">
+          <p className="font-medium text-lg max-w-[550px]">
             Stay connect at all times when you buy Airtime and renew your Data
             Bundles on paywave.
           </p>

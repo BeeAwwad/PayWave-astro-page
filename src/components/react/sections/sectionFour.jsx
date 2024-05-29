@@ -1,8 +1,7 @@
 import SubHeader from "./subHeader"
 import Card from "../card"
 import { motion, useScroll } from "framer-motion"
-import { useEffect, useRef } from "react"
-import Lenis from "@studio-freight/lenis"
+import { useRef } from "react"
 
 function sectionFour() {
   const subHeaderContent = [
@@ -43,16 +42,6 @@ function sectionFour() {
     offset: ["start start", "end end"],
   })
 
-  useEffect(() => {
-    const lenis = new Lenis()
-
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-
-    requestAnimationFrame(raf)
-  }, [])
   return (
     <>
       <SubHeader

@@ -42,7 +42,7 @@ export function NavList() {
     <NavigationMenu>
       <NavigationMenuList className="hidden lg:flex space-x-4">
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-base">
+          <NavigationMenuTrigger className="text-base bg-[#002C6E]">
             Company
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -79,7 +79,7 @@ export function NavList() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-base">
+          <NavigationMenuTrigger className="text-base bg-[#002C6E]">
             Features
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -94,7 +94,7 @@ export function NavList() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink>
-            <a className="text-base font-medium ml-6" href="/">
+            <a className="text-base font-medium ml-6" href="#footer">
               Support
             </a>
           </NavigationMenuLink>

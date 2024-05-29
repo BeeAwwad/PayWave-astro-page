@@ -31,11 +31,11 @@ function CtaButtons() {
           </SheetContent>
         </Sheet>
       </div>
-      <div className="hidden lg:flex lg:space-x-4">
-        <Button className="text-base ease-in" variant="ghost">
+      <div className="hidden lg:flex lg:space-x-4 lg:items-center lg:ml-6">
+        <span className="hover:scale-105 ease-in transform transition duration-300 cursor-pointer">
           Login
-        </Button>
-        <Button className="text-base bg-[#002C6E] hover:bg-[#327CEB] ease-in">
+        </span>
+        <Button className="text-base bg-[#327CEB] hover:bg-white hover:text-black ease-in transform transition duration-300 hover:scale-105">
           Get the App
         </Button>
       </div>

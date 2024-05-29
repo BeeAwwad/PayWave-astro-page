@@ -1,5 +1,5 @@
 function SectionSix() {
-  return <div>SectionSix</div>
+  return <section id="footer">SectionSix</section>
 }
 
 export default SectionSix
