@@ -24,14 +24,14 @@ function sectionThree() {
       <h2 className="text-[#327CEB] text-center text-xl font-poppins mt-16">
         Merchant
       </h2>
-      <section className="bg-[#002C6E] font-poppins p-10 mt-9 md:mx-16 xl:mx-48 md:rounded-2xl h-[620px] pt-32">
+      <section className="bg-[#002C6E] font-poppins p-10 mt-9 md:mx-16 xl:mx-48 md:rounded-2xl h-[620px] pt-28">
         <div className="flex flex-col items-center justify-center">
           <p className="text-white text-center text-xl md:text-4xl lg:text-5xl max-w-[400px] md:max-w-[500px] lg:max-w-[650px]">
             Recieve payments from your customers
             <span className="text-[#327CEB] italic"> Instantly </span>
             with QR pay or Merchant ID
           </p>
-          <Button className="bg-white text-[#002C6E] text-lg mt-12 hover:text-white hover:bg-[#327CEB] ease-in">
+          <Button className="bg-white text-[#002C6E] text-lg mt-12 hover:text-white hover:bg-[#327CEB] ease-in transform duration-300 hover:scale-105">
             Open a Merchant Account
           </Button>
         </div>
