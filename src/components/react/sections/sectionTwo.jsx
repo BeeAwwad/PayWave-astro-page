@@ -46,15 +46,15 @@ function SectionTwo() {
         <h3>Payments</h3>
       </SubHeader>
       <section className="grid grid-cols-1 md:grid-cols-2 md:grid-row-2 mx-5 md:mx-16 lg:mx-32 xl:mx-48 font-poppins gap-6">
-        <div className="md:col-span-2 c md:bg-[url('/images/section/section-2/section-2.png')] bg-no-repeat bg-center bg-cover text-white rounded-3xl p-6 md:py-20">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mt-6 max-w-[600px]">
+        <div className="md:col-span-2 bg-[url('/images/section/section-2/section-2-sm.png')] md:bg-[url('/images/section/section-2/section-2.png')]  bg-no-repeat bg-center bg-cover text-white rounded-3xl overflow-hidden p-6 md:py-20 min-h-80 sm:min-h-96">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mt-6 max-w-[700px]">
             Unified payment platform for all your finances
           </h2>
           <p className="mt-6 max-w-[550px] md:text-lg">
             From Airtime, Data to your cable plans, paywave synergizes all your
             payment channels to one app.
           </p>
-          <Button className="text-base bg-[#002C6E] hover:bg-[#327CEB] ease-in mt-7">
+          <Button className="text-base bg-[#002C6E] hover:bg-[#327CEB] ease-in mt-14 md:mt-20 lg:mt-24">
             Sign up now
           </Button>
         </div>
@@ -125,7 +125,7 @@ function SectionTwo() {
               />
             </div>
 
-            <div className="blur-load rounded-lg overflow-hidden w-40 absolute bottom-44 left-32">
+            <div className="blur-load rounded-lg overflow-hidden w-40 absolute bottom-44 left-[7.5rem]">
               <img
                 src="/images/section/section-2/renew-subscription.png"
                 alt="renew subscriptions"
