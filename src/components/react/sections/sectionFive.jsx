@@ -14,7 +14,7 @@ function sectionFive() {
   }
 
   return (
-    <section className="font-poppins my-16 mx-5 md:mx-16 xl:mx-48">
+    <section className="font-poppins my-24 mx-5 md:mx-16 xl:mx-48">
       <h2 className="mb-4 text-4xl font-semibold text-center max-w-[600px] mx-auto">
         Frequently Asked Questions
       </h2>
