@@ -43,8 +43,10 @@ function sectionThree() {
             <span className="text-[#327CEB] italic"> Instantly </span>
             with QR pay or Merchant ID
           </p>
-          <Button className="bg-white text-[#002C6E] text-lg mt-12 hover:text-white hover:bg-[#327CEB] ease-in transform duration-300 hover:scale-105">
-            Open a Merchant Account
+          <Button className="bg-white text-[#002C6E] text-lg mt-12 hover:text-white hover:bg-[#327CEB] ease-in transform duration-300 group hover:scale-105">
+            <span className="relative inline-block transition-transform duration-300 group-hover:scale-105">
+              Open a Merchant Account
+            </span>
           </Button>
         </div>
         <div className="relative mt-20">

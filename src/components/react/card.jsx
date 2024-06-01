@@ -20,9 +20,13 @@ function Card(props) {
           </p>
         </div>
         <Button
-          className={"text-base bg-[#002C6E] hover:bg-[#327CEB] ease-in w-fit"}
+          className={
+            "text-base bg-[#002C6E] ease-in w-fit group hover:scale-105 hover:text-white hover:bg-[#002C6E] transition-transform duration-300"
+          }
         >
-          Start a fixed savings plan
+          <span className="relative inline-block transition-transform duration-300 group-hover:scale-105">
+            Start a fixed savings plan
+          </span>
         </Button>
       </motion.div>
     </div>

@@ -54,8 +54,10 @@ function SectionTwo() {
             From Airtime, Data to your cable plans, paywave synergizes all your
             payment channels to one app.
           </p>
-          <Button className="text-base bg-[#002C6E] hover:bg-[#327CEB] ease-in mt-14 md:mt-20 lg:mt-24">
-            Sign up now
+          <Button className="text-base bg-[#002C6E] hover:bg-[#327CEB] ease-in group hover:scale-105 mt-14 md:mt-20 lg:mt-24">
+            <span className="transition-transform duration-300 group-hover:scale-105">
+              Sign up now
+            </span>
           </Button>
         </div>
         <div className="bg-[#F6F9FF] h-fit flex flex-col justify-between pt-16 px-8  rounded-3xl">

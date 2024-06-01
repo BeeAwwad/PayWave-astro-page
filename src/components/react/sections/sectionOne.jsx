@@ -19,11 +19,15 @@ function SectionOne() {
             simple with Paywave
           </p>
           <div className="flex justify-center sm:justify-start mt-12">
-            <Button className="text-base text-[#002C6E] bg-white border-[#002C6E] border-2 hover:bg-[#327CEB] hover:border-[#327CEB] hover:text-white ease-in">
-              Open an account
+            <Button className="text-base text-[#002C6E] bg-white border-[#002C6E] border-2 hover:bg-[#327CEB] hover:border-[#327CEB] hover:text-white ease-in group hover:scale-105">
+              <span className="relative inline-block transition-transform duration-300 group-hover:scale-105">
+                Open an account
+              </span>
             </Button>
-            <Button className="text-base bg-[#002C6E] hover:bg-[#327CEB] ease-in ml-5">
-              Get the app
+            <Button className="text-base bg-[#002C6E] hover:bg-[#327CEB] ease-in ml-5 group hover:scale-105">
+              <span className="relative inline-block transition-transform duration-300 group-hover:scale-105">
+                Get the app
+              </span>
             </Button>
           </div>
         </div>

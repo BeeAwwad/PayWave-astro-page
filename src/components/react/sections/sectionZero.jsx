@@ -14,11 +14,13 @@ function sectionZero() {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-center max-w-[900px]">
           {Content[0].header}
         </h1>
-        <p className="mt-14 text-center font-medium md:text-xl lg:text-3xl">
+        <p className="mt-14 text-center font-medium md:text-xl lg:text-2xl max-w-3xl">
           {Content[1].paragraph}
         </p>
-        <Button className="text-base bg-[#327CEB] hover:bg-[#002C6E] ease-in mt-14 max-w-[1252.05px]">
-          Read the Paywave Story
+        <Button className="text-base bg-[#327CEB] hover:bg-[#002C6E] ease-in mt-14 max-w-[1252.05px] duration-300 transform group hover:scale-105">
+          <span className="transition-transform duration-300 group-hover:scale-105">
+            Read the Paywave Story
+          </span>
         </Button>
       </div>
     </section>
