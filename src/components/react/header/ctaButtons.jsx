@@ -14,20 +14,32 @@ function CtaButtons() {
       <div className="lg:hidden">
         <Sheet>
           <SheetTrigger>
-            <LuAlignJustify />
+            <LuAlignJustify className="size-7" />
+            <span className="sr-only">Open</span>
           </SheetTrigger>
-          <SheetContent>
-            <SheetHeader>
-              <SheetDescription>
-                <div className="flex flex-col space-y-4 items-start w-full text-lg text-black mt-10">
-                  <a href="">Login</a>
-                  <a href="">Company</a>
-                  <a href="">Features</a>
-                  <a href="">Support</a>
-                  <a href="">Contact</a>
-                </div>
-              </SheetDescription>
-            </SheetHeader>
+          <SheetContent
+            side="top"
+            className=" inset-0 flex flex-col justify-between py-14 px-10 pb-6 md:px-6"
+          >
+            <div className="flex flex-col space-y-9 items-start w-full text-black font-semibold text-2xl md:text-3xl mt-10">
+              <a href="">Company</a>
+              <a href="">Payments</a>
+              <a href="">Features</a>
+              <a href="">Help</a>
+            </div>
+
+            <div className="flex flex-col space-y-6">
+              <Button className="text-base text-[#002C6E] bg-white border-[#002C6E] border-2 hover:bg-[#327CEB] hover:border-[#327CEB] hover:text-white ease-in group hover:scale-105">
+                <span className="relative inline-block transition-transform duration-300 group-hover:scale-105">
+                  Open an account
+                </span>
+              </Button>
+              <Button className="text-base bg-[#002C6E] hover:bg-[#327CEB] ease-in group hover:scale-105">
+                <span className="relative inline-block transition-transform duration-300 group-hover:scale-105">
+                  Get the app
+                </span>
+              </Button>
+            </div>
           </SheetContent>
         </Sheet>
       </div>
