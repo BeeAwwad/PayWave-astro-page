@@ -11,7 +11,7 @@ function SectionOne() {
           />
         </div>
         <div className="flex flex-col flex-1 py-16">
-          <h1 className="text-5xl lg:text-6xl font-semibold xl:text-7xl max-w-[600px]">
+          <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold max-w-[600px]">
             Simplify your finance with Paywave.
           </h1>
           <p className="mt-12 md:text-lg lg:text-2xl max-w-[450px]">

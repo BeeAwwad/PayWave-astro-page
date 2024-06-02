@@ -11,71 +11,28 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
 
-const features = [
-  {
-    title: "Online Banking",
-    description: "Manage accounts and perform transactions securely.",
-  },
-  {
-    title: "Mobile Banking",
-    description: "Access banking services on the go via mobile app.",
-  },
-  {
-    title: "Payment Processing",
-    description: "Convenient peer-to-peer and bill payments.",
-  },
-  {
-    title: "Digital Wallets",
-    description: "Store and manage payment cards digitally.",
-  },
-  {
-    title: "Fraud Detection and Security",
-    description: "Advanced security for user protection.",
-  },
-  {
-    title: "Automated Savings",
-    description: "Tailored recommendations for smart decisions.",
-  },
-]
 export function NavList() {
   return (
     <NavigationMenu>
       <NavigationMenuList className="hidden lg:flex space-x-4">
         <NavigationMenuItem>
           <NavigationMenuTrigger className="text-base bg-[#002C6E]">
-            Company
+            Payments
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <img
-                      src="/images/logo/logo.svg"
-                      alt="Logo"
-                      width={100}
-                      height={100}
-                    />
-                    <div className="mb-2 mt-4 text-lg font-medium">PayWave</div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Simplify your finance with PayWave.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
+            <div className="rounded-2xl w-96 h-fit">
+              <div className="bg-[#DCEAFF] p-6 min-h-32">
+                <h3 className="font-semibold">Company</h3>
+                <p>
+                  At Paywave, our goal is to unify all your payment processes
+                  online.
+                </p>
+              </div>
+              <ul className="p-6 text-[#002C6E] font-semibold min-h-32 flex flex-col gap-3">
+                <li className="mb-2">About the Company</li>
+                <li className="mb-2">The Paywave Story</li>
+              </ul>
+            </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
@@ -83,28 +40,62 @@ export function NavList() {
             Features
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {features.map((feature) => (
-                <ListItem key={feature.title} title={feature.title}>
-                  {feature.description}
-                </ListItem>
-              ))}
-            </ul>
+            <div className="rounded-2xl w-96 h-fit">
+              <div className="bg-[#DCEAFF] p-6 min-h-32">
+                <h3 className="font-semibold">Features</h3>
+                <p>
+                  Having all your bill paymets in one place makes your daily
+                  spending seamless.
+                </p>
+              </div>
+              <ul className="p-6 text-[#002C6E] font-semibold min-h-32 flex flex-col gap-3">
+                <li className="mb-2">Recharge Airtime</li>
+                <li className="mb-2">Buy Data Bundules</li>
+                <li className="mb-2">Renew TV Subscription</li>
+                <li className="mb-2">Pay Electricity Bills</li>
+              </ul>
+            </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink>
-            <a className="text-base font-medium ml-6" href="#footer">
-              Support
-            </a>
-          </NavigationMenuLink>
+          <NavigationMenuTrigger className="text-base bg-[#002C6E]">
+            Features
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <div className="rounded-2xl w-96 h-fit">
+              <div className="bg-[#DCEAFF] p-6 min-h-32">
+                <h3 className="font-semibold">Features</h3>
+                <p>
+                  Having all your bill payments in one place makes your daily
+                  spending seamless.
+                </p>
+              </div>
+              <ul className="p-6 text-[#002C6E] font-semibold min-h-32 flex flex-col gap-3">
+                <li className="mb-2">Scan to Pay</li>
+                <li className="mb-2">Personal Savings</li>
+              </ul>
+            </div>
+          </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink>
-            <a className="text-base font-medium ml-6" href="/">
-              Contact
-            </a>
-          </NavigationMenuLink>
+          <NavigationMenuTrigger className="text-base bg-[#002C6E]">
+            Help
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <div className="rounded-2xl w-96 h-fit">
+              <div className="bg-[#DCEAFF] p-6 min-h-32">
+                <h3 className="font-semibold">Help</h3>
+                <p>
+                  Need some help or you want to share a word with us? Our doors
+                  are wide open.
+                </p>
+              </div>
+              <ul className="p-6 text-[#002C6E] font-semibold min-h-32 flex flex-col gap-3">
+                <li className="mb-2">Frequently Asked Questions</li>
+                <li className="mb-2">Contact Support</li>
+              </ul>
+            </div>
+          </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
