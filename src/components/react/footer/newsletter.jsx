@@ -20,7 +20,7 @@ function NewsLetter() {
       <div className="md;flex md:flex-col md:items-end md:mt-auto">
         <div className="flex justify-center md:justify-end mt-auto">
           <input
-            className="text-[#002C6E] mr-3 px-5 py-2 rounded-3xl w-full outline-none placeholder:text-[#002C6E] placeholder:text-xs"
+            className="text-[#002C6E] mr-3 px-5 py-2 rounded-3xl w-full outline-none placeholder:text-[#002C6E] placeholder:text-xs transition-transform duration-100 ease-out focus:scale-105"
             type="email"
             placeholder="Enter your email"
           />

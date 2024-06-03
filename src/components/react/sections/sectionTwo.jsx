@@ -1,6 +1,6 @@
 import SubHeader from "./subHeader"
 import { Button } from "@/components/ui/button"
-// import { useRef, useEffect } from "react"
+import { useState, useEffect } from "react"
 
 function SectionTwo() {
   const subHeaderContent = [
@@ -13,32 +13,15 @@ function SectionTwo() {
         "Having all your bill payments in one place makes your daily spendings seamless",
     },
   ]
-  // const containerRef = useRef(null)
+  const [isLoaded, setIsLoaded] = useState(false)
 
-  // useEffect(() => {
-  //   const blurDivs = containerRef.current.querySelectorAll(".blur.load")
-
-  //   blurDivs.forEach((div) => {
-  //     const img = div.querySelector("img")
-
-  //     function loaded() {
-  //       div.classList.add("loaded")
-  //     }
-
-  //     if (img.complete) {
-  //       loaded()
-  //     } else {
-  //       img.addEventListener("load", loaded)
-  //     }
-
-  //     // Cleanup event listener on unmount
-  //     return () => {
-  //       if (!img.complete) {
-  //         img.removeEventListener("load", loaded)
-  //       }
-  //     }
-  //   })
-  // }, [])
+  useEffect(() => {
+    const img = new Image()
+    img.src = "/images/section/section-2/section-2.png"
+    img.onload = () => {
+      setIsLoaded(true)
+    }
+  }, [])
 
   return (
     <>
@@ -46,11 +29,29 @@ function SectionTwo() {
         <h3>Payments</h3>
       </SubHeader>
       <section className="grid grid-cols-1 md:grid-cols-2 md:grid-row-2 mx-5 md:mx-16 lg:mx-32 xl:mx-48 font-poppins gap-6">
-        <div className="md:col-span-2 bg-[url('/images/section/section-2/section-2-sm.png')] md:bg-[url('/images/section/section-2/section-2.png')]  bg-no-repeat bg-center bg-cover text-white rounded-3xl overflow-hidden p-6 md:py-20 min-h-80 sm:min-h-96">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mt-6 max-w-[700px]">
+        <div
+          className={`md:col-span-2 bg-no-repeat bg-center bg-cover text-white rounded-3xl overflow-hidden p-6 md:py-20 min-h-80 sm:min-h-96 ${
+            isLoaded
+              ? "bg-[url(/images/section/section-2/section-2.png)]"
+              : "skeleton-background"
+          }`}
+        >
+          <h2
+            className={`text-3xl md:text-4xl lg:text-5xl font-medium mt-6 max-w-[700px] ${
+              isLoaded
+                ? "text-white transition-colors duration-300"
+                : "text-black"
+            }`}
+          >
             Unified payment platform for all your finances
           </h2>
-          <p className="mt-6 max-w-[550px] md:text-lg">
+          <p
+            className={`mt-6 max-w-[550px] md:text-lg ${
+              isLoaded
+                ? "text-white transition-colors duration-300"
+                : "text-black"
+            }`}
+          >
             From Airtime, Data to your cable plans, paywave synergizes all your
             payment channels to one app.
           </p>
@@ -66,32 +67,26 @@ function SectionTwo() {
             Bundles on paywave.
           </p>
           <div className="self-center mt-20 relative">
-            <div
-              className="blur-load w-56 rounded-t-2xl overflow-hidden"
-              style={{
-                backgroundImage:
-                  "url(/images/section/section-2/small-buy-airtime.png)",
-              }}
-            >
+            <div className="w-56 rounded-t-2xl overflow-hidden">
               <img
                 className="w-fit object-center object-cover"
-                src="/images/section/section-2/buy-airtime.png"
+                src="/images/section/section-2/buy-airtime.svg"
                 alt="paywave app on phone"
                 loading="lazy"
               />
             </div>
 
-            <div className="blur-load rounded-lg overflow-hidden w-24 absolute top-20 right-44">
+            <div className="rounded-lg overflow-hidden w-24 absolute top-20 right-44">
               <img
                 className="w-full"
-                src="/images/section/section-2/airtime.png"
+                src="/images/section/section-2/airtime.svg"
                 alt="buy airtime"
               />
             </div>
 
-            <div className="blur-load rounded-lg overflow-hidden w-40 absolute bottom-8 left-28">
+            <div className="rounded-lg overflow-hidden w-40 absolute bottom-8 left-28">
               <img
-                src="/images/section/section-2/subscribe.png"
+                src="/images/section/section-2/subscribe.svg"
                 alt="subscribe to data bundle"
               />
             </div>
@@ -104,32 +99,26 @@ function SectionTwo() {
           </p>
 
           <div className="self-center mt-20 relative">
-            <div
-              className="blur-load w-56 rounded-t-2xl overflow-hidden"
-              style={{
-                backgroundImage:
-                  "url(/images/section/section-2/small-buy-airtime.png)",
-              }}
-            >
+            <div className="w-56 rounded-t-2xl overflow-hidden">
               <img
                 className="w-fit object-center object-cover"
-                src="/images/section/section-2/electric-bill.png"
+                src="/images/section/section-2/electric-bill.svg"
                 alt="paywave app on phone"
                 loading="lazy"
               />
             </div>
 
-            <div className="blur-load rounded-lg overflow-hidden w-32 absolute top-56 right-36">
+            <div className="rounded-lg overflow-hidden w-32 absolute top-56 right-36">
               <img
                 className="w-full"
-                src="/images/section/section-2/pay-electric.png"
+                src="/images/section/section-2/pay-electric.svg"
                 alt="pay electric bills"
               />
             </div>
 
-            <div className="blur-load rounded-lg overflow-hidden w-40 absolute bottom-44 left-[7.5rem]">
+            <div className="rounded-lg overflow-hidden w-40 absolute bottom-44 left-[7.5rem]">
               <img
-                src="/images/section/section-2/renew-subscription.png"
+                src="/images/section/section-2/renew-subscription.svg"
                 alt="renew subscriptions"
               />
             </div>

@@ -9,7 +9,7 @@ function sectionZero() {
     },
   ]
   return (
-    <section className="md:mx-12">
+    <section className="relative z-10 md:mx-12">
       <div className="flex flex-col justify-center items-center bg-[#DCEAFF] text-[#002C6E] py-20 px-10 md:rounded-2xl">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-center max-w-[900px]">
           {Content[0].header}

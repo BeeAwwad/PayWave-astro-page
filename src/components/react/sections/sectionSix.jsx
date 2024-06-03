@@ -27,14 +27,14 @@ function SectionSix() {
           <div className="blur-load h-10 lg:h-12 z-10">
             <img
               className="w-full h-full object-contain"
-              src="/images/section/section-6/play-store.png"
+              src="/images/section/section-6/play-store.svg"
               alt="playstore icon"
             />
           </div>
           <div className="blur-load h-10 lg:h-12 z-10">
             <img
               className="w-full h-full"
-              src="/images/section/section-6/apple-store.png"
+              src="/images/section/section-6/apple-store.svg"
               alt="app store icon"
             />
           </div>
@@ -44,21 +44,21 @@ function SectionSix() {
           <div className="blur-load w-44 lg:w-56">
             <img
               className="w-full h-full object-contain"
-              src="/images/section/section-6/paywave-app.png"
+              src="/images/section/section-6/paywave-app.svg"
               alt="Paywave app on a phone"
             />
           </div>
           <div className="blur-load absolute top-10 right-[65%] sm:right-[58%] w-32 lg:w-40">
             <img
               className="w-full"
-              src="/images/section/section-6/savings-progress.png"
+              src="/images/section/section-6/savings-progress.svg"
               alt=""
             />
           </div>
           <div className="blur-load w-36 lg:w-48 absolute bottom-5 left-1/2">
             <img
               className="w-full h-full object-contain"
-              src="/images/section/section-6/buy-data.png"
+              src="/images/section/section-6/buy-data.svg"
               alt="options to buy data"
             />
           </div>

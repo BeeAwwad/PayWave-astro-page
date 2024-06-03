@@ -55,10 +55,19 @@
 
 /* Image Blur Styles */
 
-.blur-load {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* filter: blur(10px);
-  -webkit-filter: blur(10px) */
+.skeleton-background {
+  background-color: #e0e0e0;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #f6f9ff;
+  }
+  50% {
+    background-color: #eff4fc;
+  }
+  100% {
+    background-color: #f6f9ff;
+  }
 }
