@@ -71,3 +71,9 @@
     background-color: #f6f9ff;
   }
 }
+
+/* Navbar Styles */
+
+#navbar {
+  transition: top 0.3s;
+}
