@@ -1,0 +1,19 @@
+---
+const pageTitle = "Get Paywave App Page"
+import Header from "../components/astro/header.astro"
+import ContentGetApp from "@/components/react/getApp/contentGetApp"
+import "@/styles/globals.css"
+---
+
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="h-screen">
+    <Header />
+    <ContentGetApp />
+  </body>
+</html>

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { useEffect, useState } from "react"
 import { LuAlignJustify } from "react-icons/lu"
 import {
   Sheet,
@@ -9,6 +10,11 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 function CtaButtons() {
+  const [pageTitle, setPageTitle] = useState("")
+
+  useEffect(() => {
+    setPageTitle(document.title)
+  }, [])
   return (
     <div>
       <div className="lg:hidden">
@@ -36,7 +42,7 @@ function CtaButtons() {
               </Button>
               <Button className="text-base bg-[#002C6E] hover:bg-[#327CEB] ease-in group hover:scale-105">
                 <span className="relative inline-block transition-transform duration-300 group-hover:scale-105">
-                  Get the app
+                  <a href="/getApp">Get the App</a>
                 </span>
               </Button>
             </div>
@@ -47,9 +53,11 @@ function CtaButtons() {
         <span className="hover:scale-105 ease-in transform transition duration-300 cursor-pointer text-base font-medium">
           Login
         </span>
-        <Button className="text-base bg-[#327CEB] hover:bg-white hover:text-black ease-in transform transition duration-300 hover:scale-105">
-          Get the App
-        </Button>
+        {pageTitle !== "Get Paywave App Page" && (
+          <Button className="text-base bg-[#327CEB] hover:bg-white hover:text-black ease-in transform transition duration-300 hover:scale-105">
+            <a href="/getApp">Get the App</a>
+          </Button>
+        )}
       </div>
     </div>
   )

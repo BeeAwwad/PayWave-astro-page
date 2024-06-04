@@ -8,7 +8,17 @@ import SectionFive from "../react/sections/sectionFive"
 import SectionSix from "../react/sections/sectionSix"
 ---
 
-<main class="">
+<main class="relative">
+  <img
+    class="absolute top-64 left-0 z-[-1] hidden md:block w-full"
+    src="/images/section/section-1/background.svg"
+    alt="background image"
+  />
+  <img
+    class="absolute top-64 left-0 z-[-1] block md:hidden w-full"
+    src="/images/section/section-1/background-sm.svg"
+    alt="background image"
+  />
   <SectionOne />
   <SectionZero />
   <SectionTwo client:load />
