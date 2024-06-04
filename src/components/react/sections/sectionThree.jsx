@@ -54,17 +54,20 @@ function sectionThree() {
             className="absolute -top-20 sm:-top-24 lg:-top-9 right-2/4 sm:right-1/2 lg:right-[70%] xl:right-3/4 size-40 sm:size-52 z-50"
             src="/images/section/section-3/section-3-instant.svg"
             alt="instant-payment"
+            loading="lazy"
           />
           <div className="qr-code size-12 top-24 sm:top-20 right-[2%] sm:right-16 sm:size-20 z-30 md:right-10 lg:right-[15%] lg:top-52"></div>
           <img
             className="absolute z-0 right-[14%] sm:right-[20%] size-64 sm:size-96 lg:left-[15%]"
             src="/images/section/section-3/section-3-user-musa.svg"
             alt="user_musa"
+            loading="lazy"
           />
           <img
             className="absolute top-44 sm:top-52 right-2 sm:right-15 lg:right-[29%] size-48 sm:size-72  z-50 "
             src="/images/section/section-3/section-3-scan.svg"
             alt="scan_code_image"
+            loading="lazy"
           />
         </div>
       </section>

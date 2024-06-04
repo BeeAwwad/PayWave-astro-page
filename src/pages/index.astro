@@ -4,6 +4,7 @@ import Header from "../components/astro/header.astro"
 import Main from "../components/astro/main.astro"
 import Footer from "../components/astro/footer.astro"
 import "@/styles/globals.css"
+import { ChevronUp } from "lucide-react"
 ---
 
 <html class="scroll-smooth" lang="en">
@@ -17,5 +18,37 @@ import "@/styles/globals.css"
     <Header />
     <Main />
     <Footer />
+    <!-- Scroll to Top Button -->
+    <button
+      id="scrollToTopBtn"
+      title="Go to top"
+      class="hidden fixed bottom-5 right-5 z-[90] bg-[#327CEB] text-white p-3 rounded-full text-lg hover:scale-110 focus:scale-110 transition-transform duration-300 ease-in"
+    >
+      <ChevronUp />
+    </button>
+
+    <script>
+      // Get the button
+      const scrollToTopBtn = document.querySelector("#scrollToTopBtn")
+
+      window.addEventListener("scroll", scrollFunction)
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 30 ||
+          document.documentElement.scrollTop > 30
+        ) {
+          scrollToTopBtn.classList.remove("hidden")
+        } else {
+          scrollToTopBtn.classList.add("hidden")
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      scrollToTopBtn.onclick = function () {
+        document.body.scrollTop = 0 // For Safari
+        document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE, and Opera
+      }
+    </script>
   </body>
 </html>
