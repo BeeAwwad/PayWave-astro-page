@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react"
 function ContentGetApp() {
   return (
     <div className="h-full font-poppins bg-[url('/images/get-app/background-small.svg')] md:bg-[url('/images/get-app/background.svg')] bg-no-repeat sm:bg-cover bg-center bg-fixed flex items-center justify-center md:items-start">
-      <div className="flex flex-col items-center justify-center py-16 px-9 h-fit text-center">
+      <div className="flex flex-col items-center justify-center py-12 px-9 h-fit text-center">
         <h1 className="text-5xl md:text-6xl font-bold md:font-extrabold text-[#002c6e] mb-5 mt-14 md:mt-5">
           Get The Paywave App
         </h1>
