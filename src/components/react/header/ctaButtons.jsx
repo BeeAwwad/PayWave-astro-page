@@ -53,10 +53,12 @@ function CtaButtons() {
         <span className="hover:scale-105 ease-in transform transition duration-300 cursor-pointer text-base font-medium">
           Login
         </span>
-        {pageTitle !== "Get Paywave App Page" && (
+        {pageTitle === "Home Page" ? (
           <Button className="text-base bg-[#327CEB] hover:bg-white hover:text-black ease-in transform transition duration-300 hover:scale-105">
             <a href="/getApp">Get the App</a>
           </Button>
+        ) : (
+          ""
         )}
       </div>
     </div>

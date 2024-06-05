@@ -21,7 +21,9 @@ import { ChevronUp } from "lucide-react"
 
   <script>
     // Get the button
-    const scrollToTopBtn = document.querySelector("#scrollToTopBtn")
+    const scrollToTopBtn = document.querySelector(
+      "#scrollToTopBtn"
+    ) as HTMLButtonElement | null
 
     window.addEventListener("scroll", scrollFunction)
 
