@@ -48,20 +48,40 @@ function SignUpForm() {
       }
     }
 
+    const handleAnimationEnd = (e) => {
+      steps[currentStep].classList.remove("hidden")
+      e.target.classList.toggle(
+        "hidden",
+        !e.target.classList.contains("active")
+      )
+    }
+
+    steps.forEach((step) => {
+      step.addEventListener("animationend", handleAnimationEnd)
+    })
+
     signUpForm.addEventListener("click", handleClick)
 
     return () => {
       signUpForm.removeEventListener("click", handleClick)
+      steps.forEach((step) => {
+        step.removeEventListener("animationend", handleAnimationEnd)
+      })
     }
 
     function showCurrentStep() {
       steps.forEach((step, index) => {
         step.classList.toggle("active", index === currentStep)
+        step.classList.toggle("hidden", index !== currentStep)
       })
     }
   }, [])
   return (
-    <form ref={formContainer} data-create-account>
+    <form
+      ref={formContainer}
+      data-create-account
+      className="overflow-hidden relative h-min"
+    >
       {/* Step One */}
       <Card className="w-full max-w-xs mx-auto card" data-step>
         <CardHeader>
@@ -101,7 +121,7 @@ function SignUpForm() {
         </CardHeader>
         <CardContent>
           <div className="grid grid-rows-1 grid-cols-2">
-            <div className="cursor-pointer" data-next>
+            <div className="cursor-pointer" data-prev>
               <img src="" alt="" />
               <div>
                 <h3>Personal Account</h3>
