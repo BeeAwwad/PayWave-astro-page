@@ -11,17 +11,59 @@ import {
 } from "@/components/ui/card"
 function SignUpForm() {
   const formContainer = useRef(null)
-  console.log("🚀 ~ SignUpForm ~ formContainer:", formContainer)
 
   useEffect(() => {
     const signUpForm = formContainer.current
     const steps = [...signUpForm.querySelectorAll("[data-step]")]
-    console.log("🚀 ~ useEffect ~ steps:", steps)
+    let currentStep = steps.findIndex((step) =>
+      step.classList.contains("active")
+    )
+
+    if (currentStep < 0) {
+      currentStep = 0
+      showCurrentStep()
+    }
+
+    const handleClick = (e) => {
+      let incrementor
+      if (e.target.closest("[data-next]")) {
+        e.preventDefault()
+        incrementor = 1
+      } else if (e.target.closest("[data-prev]")) {
+        e.preventDefault()
+        incrementor = -1
+      }
+      if (!incrementor) return
+
+      const inputs = [...steps[currentStep].querySelectorAll("input")]
+      const allValid = inputs.every((input) => input.reportValidity())
+      if (allValid) {
+        currentStep += incrementor
+        if (currentStep < 0) {
+          currentStep = 0
+        } else if (currentStep >= steps.length) {
+          currentStep = steps.length - 1
+        }
+        showCurrentStep()
+      }
+    }
+
+    signUpForm.addEventListener("click", handleClick)
+
+    return () => {
+      signUpForm.removeEventListener("click", handleClick)
+    }
+
+    function showCurrentStep() {
+      steps.forEach((step, index) => {
+        step.classList.toggle("active", index === currentStep)
+      })
+    }
   }, [])
   return (
     <form ref={formContainer} data-create-account>
       {/* Step One */}
-      <Card className="w-full max-w-xs mx-auto card active" data-step>
+      <Card className="w-full max-w-xs mx-auto card" data-step>
         <CardHeader>
           <CardTitle>Create your Paywave account</CardTitle>
           <CardDescription>
@@ -29,13 +71,13 @@ function SignUpForm() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <label htmlFor="email">Enter your email address</label>
+          <label htmlFor="enterEmail">Enter your email address</label>
           <Input
-            name="email"
+            id="enterEmail"
             type="email"
             placeholder="Enter your email address"
           />
-          <Button>Next</Button>
+          <Button data-next>Next</Button>
         </CardContent>
         <CardFooter className="flex-col text-center">
           <p>Or log in with</p>
@@ -59,7 +101,7 @@ function SignUpForm() {
         </CardHeader>
         <CardContent>
           <div className="grid grid-rows-1 grid-cols-2">
-            <div>
+            <div className="cursor-pointer" data-next>
               <img src="" alt="" />
               <div>
                 <h3>Personal Account</h3>
@@ -69,7 +111,7 @@ function SignUpForm() {
                 </p>
               </div>
             </div>
-            <div>
+            <div className="cursor-pointer" data-next>
               <img src="" alt="" />
               <div>
                 <h3>Merchant Account</h3>
@@ -93,17 +135,17 @@ function SignUpForm() {
         <CardContent>
           <label htmlFor="passwordOne">Enter Password</label>
           <Input
-            name="passwordOne"
+            id="passwordOne"
             type="password"
             placeholder="Enter password"
           />
           <label htmlFor="passwordTwo"> Re-enter password</label>
           <Input
-            name="passwordTwo"
+            id="passwordTwo"
             type="password"
             placeholder="Enter password again"
           />
-          <Button>Next</Button>
+          <Button data-next>Next</Button>
         </CardContent>
       </Card>
       {/* Step Four */}
@@ -115,9 +157,9 @@ function SignUpForm() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <label htmlFor="number">Enter your Phone Number</label>
-          <Input name="number" type="number" placeholder="912 345 678" />
-          <Button>Next</Button>
+          <label htmlFor="phoneNumber">Enter your Phone Number</label>
+          <Input id="phoneNumber" type="number" placeholder="912 345 678" />
+          <Button data-next>Next</Button>
         </CardContent>
         <CardFooter>
           <p>Verify with my email</p>
