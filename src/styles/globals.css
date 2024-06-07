@@ -113,3 +113,33 @@
     transform: scale(0);
   }
 }
+
+/* Progress Bar */
+
+.progress-container::before {
+  content: "";
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  height: 4px;
+  transform: translateY(-50%);
+}
+
+.progress {
+  background-color: #002c6e;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  transform: translateY(-50%);
+  z-index: 2;
+  transition: width 0.4s ease;
+}
+
+.circle.active {
+  background-color: #002c6e;
+}

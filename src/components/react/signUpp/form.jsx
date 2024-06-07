@@ -14,13 +14,20 @@ function SignUpForm() {
 
   useEffect(() => {
     const signUpForm = formContainer.current
+    const progressBar = signUpForm.querySelector("#progressBar")
     const steps = [...signUpForm.querySelectorAll("[data-step]")]
+    const circles = [...signUpForm.querySelectorAll(".circle")]
     let currentStep = steps.findIndex((step) =>
       step.classList.contains("active")
     )
 
-    if (currentStep < 0) {
+    let currentCircle = circles.findIndex((circle) =>
+      circle.classList.contains("active")
+    )
+
+    if (currentStep < 0 || currentCircle < 0) {
       currentStep = 0
+      currentCircle = 0
       showCurrentStep()
     }
 
@@ -69,7 +76,30 @@ function SignUpForm() {
       })
     }
 
+    function showCurrentCircle() {
+      circles.forEach((circle, index) => {
+        if (index <= currentStep) {
+          circle.classList.add("active")
+        } else {
+          circle.classList.remove("active")
+        }
+      })
+
+      const allActiveCircles = [
+        ...circles.filter((circle) => circle.classList.contains("active")),
+      ]
+      console.log(
+        "🚀 ~ showCurrentCircle ~ allActiveCircles:",
+        allActiveCircles.length,
+        circles.length
+      )
+      progressBar.style.width = `${
+        ((allActiveCircles.length - 1) / (circles.length - 1)) * 100
+      }%`
+    }
+
     function showCurrentStep() {
+      showCurrentCircle()
       steps.forEach((step, index) => {
         step.classList.toggle("active", index === currentStep)
         step.classList.toggle("hidden", index !== currentStep)
@@ -80,8 +110,27 @@ function SignUpForm() {
     <form
       ref={formContainer}
       data-create-account
-      className="overflow-hidden relative h-min"
+      className="overflow-hidden relative h-min font-poppins"
     >
+      {/* Progress bar */}
+      <div className="max-w-lg mx-auto my-10">
+        <div className="progress-container relative flex justify-between items-center w-full">
+          <div className="progress" id="progressBar"></div>
+          <div className="circle relative bg-[#ddd] size-3 flex flex-col items-center justify-center rounded-full z-10 transition-all duration-400 ease-in-out after:content-['Email'] after:absolute after:top-5 after:text-sm">
+            {/* Email */}
+          </div>
+          <div className="circle bg-[#ddd] size-3 flex items-center justify-center rounded-full z-10 transition-all duration-400 ease-in-out after:content-[''] after">
+            {/* Account Type */}
+          </div>
+          <div className="circle bg-[#ddd] size-3 flex items-center justify-center rounded-full z-10 transition-all duration-400 ease-in-out after:content-[''] after">
+            {/* Password */}
+          </div>
+          <div className="circle bg-[#ddd] size-3 flex items-center justify-center rounded-full z-10 transition-all duration-400 ease-in-out after:content-[''] after">
+            {/* Authenticaton */}
+          </div>
+        </div>
+      </div>
+
       {/* Step One */}
       <Card className="w-full max-w-xs mx-auto card" data-step>
         <CardHeader>
@@ -179,7 +228,9 @@ function SignUpForm() {
         <CardContent>
           <label htmlFor="phoneNumber">Enter your Phone Number</label>
           <Input id="phoneNumber" type="number" placeholder="912 345 678" />
-          <Button data-next>Next</Button>
+          <Button className="" data-next>
+            Next
+          </Button>
         </CardContent>
         <CardFooter>
           <p>Verify with my email</p>
