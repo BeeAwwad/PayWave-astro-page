@@ -3,16 +3,17 @@ import Logo from "../react/header/logo"
 import CtaButtons from "../react/header/ctaButtons"
 import { NavList } from "../react/header/navList"
 import "@/styles/globals.css"
+const { title } = Astro.props
 ---
 
 <header
   id="navbar"
-  class="sticky top-0 left-0 z-[90] text-white transition-top duration-300"
+  class={`sticky top-0 left-0 z-[90] ${title === "Sign Up Page" || title === "Signin Page" ? "text-[#002C6E] bg-white" : "text-white bg-[#002C6E]"} transition-top duration-300`}
 >
   <nav
-    class="flex justify-between items-center px-10 lg:px-24 font-poppins shadow-md h-20 md:h-16 bg-[#002C6E]"
+    class="flex justify-between items-center px-10 lg:px-24 font-poppins shadow-md h-20 md:h-16"
   >
-    <Logo />
+    <Logo client:load />
     <NavList client:load />
     <CtaButtons client:load />
   </nav>

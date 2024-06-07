@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
@@ -12,93 +12,102 @@ import {
 } from "@/components/ui/navigation-menu"
 
 export function NavList() {
+  const [pageTitle, setPageTitle] = useState("")
+
+  useEffect(() => {
+    setPageTitle(document.title)
+  }, [])
   return (
-    <NavigationMenu>
-      <NavigationMenuList className="hidden lg:flex space-x-4">
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-base bg-[#002C6E]">
-            Payments
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <div className="rounded-2xl w-96 h-fit">
-              <div className="bg-[#DCEAFF] p-6 min-h-32">
-                <h3 className="font-semibold">Company</h3>
-                <p>
-                  At Paywave, our goal is to unify all your payment processes
-                  online.
-                </p>
-              </div>
-              <ul className="p-6 text-[#002C6E] font-semibold min-h-32 flex flex-col gap-3">
-                <li className="mb-2">About the Company</li>
-                <li className="mb-2">The Paywave Story</li>
-              </ul>
-            </div>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-base bg-[#002C6E]">
-            Features
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <div className="rounded-2xl w-96 h-fit">
-              <div className="bg-[#DCEAFF] p-6 min-h-32">
-                <h3 className="font-semibold">Features</h3>
-                <p>
-                  Having all your bill paymets in one place makes your daily
-                  spending seamless.
-                </p>
-              </div>
-              <ul className="p-6 text-[#002C6E] font-semibold min-h-32 flex flex-col gap-3">
-                <li className="mb-2">Recharge Airtime</li>
-                <li className="mb-2">Buy Data Bundules</li>
-                <li className="mb-2">Renew TV Subscription</li>
-                <li className="mb-2">Pay Electricity Bills</li>
-              </ul>
-            </div>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-base bg-[#002C6E]">
-            Features
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <div className="rounded-2xl w-96 h-fit">
-              <div className="bg-[#DCEAFF] p-6 min-h-32">
-                <h3 className="font-semibold">Features</h3>
-                <p>
-                  Having all your bill payments in one place makes your daily
-                  spending seamless.
-                </p>
-              </div>
-              <ul className="p-6 text-[#002C6E] font-semibold min-h-32 flex flex-col gap-3">
-                <li className="mb-2">Scan to Pay</li>
-                <li className="mb-2">Personal Savings</li>
-              </ul>
-            </div>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-base bg-[#002C6E]">
-            Help
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <div className="rounded-2xl w-96 h-fit">
-              <div className="bg-[#DCEAFF] p-6 min-h-32">
-                <h3 className="font-semibold">Help</h3>
-                <p>
-                  Need some help or you want to share a word with us? Our doors
-                  are wide open.
-                </p>
-              </div>
-              <ul className="p-6 text-[#002C6E] font-semibold min-h-32 flex flex-col gap-3">
-                <li className="mb-2">Frequently Asked Questions</li>
-                <li className="mb-2">Contact Support</li>
-              </ul>
-            </div>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+    <>
+      {pageTitle === "Sign Up Page" || pageTitle === "Login Page" ? null : (
+        <NavigationMenu>
+          <NavigationMenuList className="hidden lg:flex space-x-4">
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="text-base bg-[#002C6E]">
+                Payments
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <div className="rounded-2xl w-96 h-fit">
+                  <div className="bg-[#DCEAFF] p-6 min-h-32">
+                    <h3 className="font-semibold">Company</h3>
+                    <p>
+                      At Paywave, our goal is to unify all your payment
+                      processes online.
+                    </p>
+                  </div>
+                  <ul className="p-6 text-[#002C6E] font-semibold min-h-32 flex flex-col gap-3">
+                    <li className="mb-2">About the Company</li>
+                    <li className="mb-2">The Paywave Story</li>
+                  </ul>
+                </div>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="text-base bg-[#002C6E]">
+                Features
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <div className="rounded-2xl w-96 h-fit">
+                  <div className="bg-[#DCEAFF] p-6 min-h-32">
+                    <h3 className="font-semibold">Features</h3>
+                    <p>
+                      Having all your bill paymets in one place makes your daily
+                      spending seamless.
+                    </p>
+                  </div>
+                  <ul className="p-6 text-[#002C6E] font-semibold min-h-32 flex flex-col gap-3">
+                    <li className="mb-2">Recharge Airtime</li>
+                    <li className="mb-2">Buy Data Bundules</li>
+                    <li className="mb-2">Renew TV Subscription</li>
+                    <li className="mb-2">Pay Electricity Bills</li>
+                  </ul>
+                </div>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="text-base bg-[#002C6E]">
+                Features
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <div className="rounded-2xl w-96 h-fit">
+                  <div className="bg-[#DCEAFF] p-6 min-h-32">
+                    <h3 className="font-semibold">Features</h3>
+                    <p>
+                      Having all your bill payments in one place makes your
+                      daily spending seamless.
+                    </p>
+                  </div>
+                  <ul className="p-6 text-[#002C6E] font-semibold min-h-32 flex flex-col gap-3">
+                    <li className="mb-2">Scan to Pay</li>
+                    <li className="mb-2">Personal Savings</li>
+                  </ul>
+                </div>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="text-base bg-[#002C6E]">
+                Help
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <div className="rounded-2xl w-96 h-fit">
+                  <div className="bg-[#DCEAFF] p-6 min-h-32">
+                    <h3 className="font-semibold">Help</h3>
+                    <p>
+                      Need some help or you want to share a word with us? Our
+                      doors are wide open.
+                    </p>
+                  </div>
+                  <ul className="p-6 text-[#002C6E] font-semibold min-h-32 flex flex-col gap-3">
+                    <li className="mb-2">Frequently Asked Questions</li>
+                    <li className="mb-2">Contact Support</li>
+                  </ul>
+                </div>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      )}
+    </>
   )
 }
 

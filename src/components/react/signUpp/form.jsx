@@ -137,7 +137,7 @@ function SignUpForm() {
 
       {/* Step One */}
       <Card
-        className="w-full max-w-sm mx-auto border-none shadow-none card"
+        className="w-full max-w-lg mx-auto border-none shadow-none card"
         data-step
       >
         <CardHeader className="mb-7">
@@ -190,7 +190,7 @@ function SignUpForm() {
       </Card>
       {/* Step Two */}
       <Card
-        className="w-full max-w-sm mx-auto card border-none shadow-none"
+        className="w-full max-w-md mx-auto card border-none shadow-none"
         data-step
       >
         <CardHeader className="mb-7">
@@ -245,7 +245,7 @@ function SignUpForm() {
       </Card>
       {/* Step Three */}
       <Card
-        className="w-full max-w-sm mx-auto card border-none shadow-none"
+        className="w-full max-w-md mx-auto card border-none shadow-none"
         data-step
       >
         <CardHeader className="mb-7">
@@ -285,7 +285,7 @@ function SignUpForm() {
       </Card>
       {/* Step Four */}
       <Card
-        className="w-full max-w-sm mx-auto card border-none shadow-none"
+        className="w-full max-w-md mx-auto card border-none shadow-none"
         data-step
       >
         <CardHeader className="mb-7">
