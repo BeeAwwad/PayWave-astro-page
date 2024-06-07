@@ -85,14 +85,18 @@ function SignUpForm() {
         }
       })
 
+      circles.forEach((circle, index) => {
+        if (index === currentStep) {
+          circle.classList.add("only")
+        } else {
+          circle.classList.remove("only")
+        }
+      })
+
       const allActiveCircles = [
         ...circles.filter((circle) => circle.classList.contains("active")),
       ]
-      console.log(
-        "🚀 ~ showCurrentCircle ~ allActiveCircles:",
-        allActiveCircles.length,
-        circles.length
-      )
+
       progressBar.style.width = `${
         ((allActiveCircles.length - 1) / (circles.length - 1)) * 100
       }%`
@@ -110,22 +114,22 @@ function SignUpForm() {
     <form
       ref={formContainer}
       data-create-account
-      className="overflow-hidden relative h-min font-poppins"
+      className="overflow-hidden relative h-min"
     >
       {/* Progress bar */}
-      <div className="max-w-lg mx-auto my-10">
+      <div className="max-w-lg mx-16 md:mx-auto mt-16 mb-20">
         <div className="progress-container relative flex justify-between items-center w-full">
           <div className="progress" id="progressBar"></div>
-          <div className="circle relative bg-[#ddd] size-3 flex flex-col items-center justify-center rounded-full z-10 transition-all duration-400 ease-in-out after:content-['Email'] after:absolute after:top-5 after:text-sm">
+          <div className="circle relative bg-[#fff] flex flex-col items-center justify-center rounded-full z-10 transition-all duration-400 ease-in-out after:content-['Email'] after:block after:absolute after:mt-12 after:text-xs after:text-nowrap">
             {/* Email */}
           </div>
-          <div className="circle bg-[#ddd] size-3 flex items-center justify-center rounded-full z-10 transition-all duration-400 ease-in-out after:content-[''] after">
+          <div className="circle relative bg-[#fff] flex items-center justify-center rounded-full z-10 transition-all duration-400 ease-in-out after:content-['Account_Type'] after:block after:absolute after:mt-12 after:text-xs after:text-nowrap">
             {/* Account Type */}
           </div>
-          <div className="circle bg-[#ddd] size-3 flex items-center justify-center rounded-full z-10 transition-all duration-400 ease-in-out after:content-[''] after">
+          <div className="circle relative bg-[#fff] flex items-center justify-center rounded-full z-10 transition-all duration-400 ease-in-out after:content-['Password'] after:block after:absolute after:mt-12 after:text-xs after:text-nowrap">
             {/* Password */}
           </div>
-          <div className="circle bg-[#ddd] size-3 flex items-center justify-center rounded-full z-10 transition-all duration-400 ease-in-out after:content-[''] after">
+          <div className="circle relative bg-[#fff] flex items-center justify-center rounded-full z-10 transition-all duration-400 ease-in-out after:content-['Authentication'] after:block after:absolute after:mt-12 after:text-xs after:text-nowrap">
             {/* Authenticaton */}
           </div>
         </div>

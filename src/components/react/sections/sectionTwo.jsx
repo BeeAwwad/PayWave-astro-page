@@ -28,7 +28,7 @@ function SectionTwo() {
       <SubHeader secHeader={subHeaderContent[2].secHeader}>
         <h3>Payments</h3>
       </SubHeader>
-      <section className="grid grid-cols-1 md:grid-cols-2 md:grid-row-2 mx-5 md:mx-16 lg:mx-32 xl:mx-48 font-poppins gap-6">
+      <section className="grid grid-cols-1 md:grid-cols-2 md:grid-row-2 mx-5 md:mx-16 lg:mx-32 xl:mx-48 gap-6">
         <div
           className={`md:col-span-2 bg-no-repeat bg-center bg-cover text-white rounded-3xl overflow-hidden p-6 md:py-20 min-h-80 sm:min-h-96 ${
             isLoaded

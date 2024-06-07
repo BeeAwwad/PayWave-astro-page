@@ -1,7 +1,7 @@
 function SubHeader({ className, children, header, paragraph, secHeader }) {
   return (
     <div
-      className={`${className} flex flex-col items-center my-20 text-center p-6 font-poppins`}
+      className={`${className} flex flex-col items-center my-20 text-center p-6`}
     >
       {children !== "" ? (
         <span className="text-[#327CEB] text-base lg:text-lg font-semibold">

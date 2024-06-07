@@ -118,7 +118,7 @@
 
 .progress-container::before {
   content: "";
-  background-color: #ddd;
+  background-color: #fff;
   position: absolute;
   top: 50%;
   left: 0;
@@ -142,4 +142,9 @@
 
 .circle.active {
   background-color: #002c6e;
+}
+
+.circle.only {
+  width: 0.5rem;
+  height: 0.5rem;
 }

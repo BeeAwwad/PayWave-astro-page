@@ -53,7 +53,7 @@ function sectionFour() {
       </SubHeader>
       <section
         ref={container}
-        className="mt-20 card-section mx-5 md:mx-16 xl:mx-48 font-poppins"
+        className="mt-20 card-section mx-5 md:mx-16 xl:mx-48"
       >
         {infoCards.map((card, index) => {
           const targetScale = 1 - (infoCards.length - index) * 0.05

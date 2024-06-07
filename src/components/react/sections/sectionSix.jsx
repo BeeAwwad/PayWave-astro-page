@@ -1,7 +1,7 @@
 function SectionSix() {
   return (
     <section className="w-full mb-32">
-      <div className="relative md:mx-24 xl:mx-48 font-poppins bg-[#DCEAFF] pt-20 lg:pt-28 px-12 md:rounded-3xl overflow-hidden">
+      <div className="relative md:mx-24 xl:mx-48 bg-[#DCEAFF] pt-20 lg:pt-28 px-12 md:rounded-3xl overflow-hidden">
         {/* Small screen image */}
         <img
           className="absolute top-16 right-0 z-0 md:hidden"

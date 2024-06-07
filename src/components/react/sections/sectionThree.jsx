@@ -21,10 +21,8 @@ function sectionThree() {
           className="w-8"
         />
       </SubHeader>
-      <h2 className="text-[#327CEB] text-center text-xl font-poppins mt-16">
-        Merchant
-      </h2>
-      <section className="relative bg-[#002C6E] font-poppins p-10 mt-9 md:mx-16 xl:mx-48 md:rounded-2xl h-[620px] pt-28">
+      <h2 className="text-[#327CEB] text-center text-xl  mt-16">Merchant</h2>
+      <section className="relative bg-[#002C6E] p-10 mt-9 md:mx-16 xl:mx-48 md:rounded-2xl h-[620px] pt-28">
         {/* Small screen image */}
         <img
           className="absolute inset-x-0 inset-y-0 w-full h-full z-0 md:hidden"
