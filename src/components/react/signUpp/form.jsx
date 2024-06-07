@@ -136,59 +136,106 @@ function SignUpForm() {
       </div>
 
       {/* Step One */}
-      <Card className="w-full max-w-xs mx-auto card" data-step>
-        <CardHeader>
-          <CardTitle>Create your Paywave account</CardTitle>
-          <CardDescription>
-            Already have an account?<span>Login in</span>
+      <Card
+        className="w-full max-w-sm mx-auto border-none shadow-none card"
+        data-step
+      >
+        <CardHeader className="mb-7">
+          <CardTitle className="text-center">
+            Create your Paywave account
+          </CardTitle>
+          <CardDescription className="text-center text-xs">
+            Already have an account?
+            <span className="text-[#327CEB]"> Login in</span>
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <label htmlFor="enterEmail">Enter your email address</label>
+        <CardContent className="mb-6">
+          <label className="text-sm" htmlFor="enterEmail">
+            Enter your email address
+          </label>
           <Input
+            className="mt-3 mb-6 focus:scale-105 transition-all duration-300 ease-in-out"
             id="enterEmail"
             type="email"
-            placeholder="Enter your email address"
+            placeholder="Email"
           />
-          <Button data-next>Next</Button>
+          <Button
+            className="w-full bg-[#327CEB] hover:bg-[#327CEB] transition-all duration-300 ease-in-out hover:scale-105 focus:scale-105"
+            data-next
+          >
+            Next
+          </Button>
         </CardContent>
         <CardFooter className="flex-col text-center">
-          <p>Or log in with</p>
-          <div>
-            <Button>Google</Button>
-            <Button>Apple</Button>
+          <p className="text-sm mb-4">Or log in with</p>
+          <div className="flex space-x-2 w-full mb-8">
+            <Button className="grow bg-[#fff] hover:bg-[#fff]  border text-black transition-all duration-300 ease-in-out hover:scale-105 focus:scale-105">
+              <img src="/images/sign-up/google.svg" alt="google sign-up" />
+            </Button>
+            <Button className="grow bg-[#fff] hover:bg-[#fff]  border text-black transition-all duration-300 ease-in-out hover:scale-105 focus:scale-105">
+              <img src="/images/sign-up/apple.svg" alt="apple sign-up" />
+            </Button>
           </div>
-          <p>
-            By registering, you accept our <a href="">Terms of use</a> and{" "}
-            <a href="">Privacy Policy</a>
+          <p className="text-xs">
+            By registering, you accept our{" "}
+            <a className="text-[#327CEB]" href="">
+              Terms of use
+            </a>{" "}
+            and{" "}
+            <a className="text-[#327CEB]" href="">
+              Privacy Policy
+            </a>
           </p>
         </CardFooter>
       </Card>
       {/* Step Two */}
-      <Card className="w-full max-w-xs mx-auto card" data-step>
-        <CardHeader>
-          <CardTitle>What kind of account would you like to open</CardTitle>
-          <CardDescription>
+      <Card
+        className="w-full max-w-sm mx-auto card border-none shadow-none"
+        data-step
+      >
+        <CardHeader className="mb-7">
+          <CardTitle className="text-center mb-3">
+            What kind of account would you like to open
+          </CardTitle>
+          <CardDescription className="text-center text-xs">
             You can switch to either accounts later on
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-rows-1 grid-cols-2">
-            <div className="cursor-pointer" data-prev>
-              <img src="" alt="" />
-              <div>
-                <h3>Personal Account</h3>
-                <p>
+          <div className="grid grid-rows-1 grid-cols-2 gap-2">
+            <div
+              className="cursor-pointer flex flex-col items-center justify-center bg-[#DCEAFF] rounded-lg p-5 grow hover:scale-105 transition-all duration-300 ease-in-out"
+              data-prev
+            >
+              <img
+                className="size-14 mb-7"
+                src="/images/sign-up/polygon-one.svg"
+                alt="polygon"
+              />
+              <div className="text-center">
+                <h3 className="mb-4 font-semibold text-xs text-nowrap">
+                  Personal Account
+                </h3>
+                <p className="text-xs">
                   Buy airtime, data and make instant payments and save your
                   money
                 </p>
               </div>
             </div>
-            <div className="cursor-pointer" data-next>
-              <img src="" alt="" />
-              <div>
-                <h3>Merchant Account</h3>
-                <p>
+            <div
+              className="cursor-pointer flex flex-col items-center justify-center bg-[#DCEAFF] rounded-lg p-5 grow hover:scale-105 transition-all duration-300 ease-in-out"
+              data-next
+            >
+              <img
+                className="size-14 mb-7"
+                src="/images/sign-up/polygon-two.svg"
+                alt="polygon"
+              />
+              <div className="text-center">
+                <h3 className="mb-4 font-semibold text-xs text-nowrap">
+                  Merchant Account
+                </h3>
+                <p className="text-xs">
                   All the features of personal, QR pay and more savings features
                 </p>
               </div>
@@ -197,47 +244,84 @@ function SignUpForm() {
         </CardContent>
       </Card>
       {/* Step Three */}
-      <Card className="w-full max-w-xs mx-auto card" data-step>
-        <CardHeader>
-          <CardTitle>Set a Password</CardTitle>
-          <CardDescription>
+      <Card
+        className="w-full max-w-sm mx-auto card border-none shadow-none"
+        data-step
+      >
+        <CardHeader className="mb-7">
+          <CardTitle className="text-center mb-3">Set a Password</CardTitle>
+          <CardDescription className="text-center text-xs">
             Your password must be 8 characters long and must include a special
             character
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <label htmlFor="passwordOne">Enter Password</label>
+          <label className="text-sm" htmlFor="passwordOne">
+            Enter Password
+          </label>
           <Input
+            className="mt-3 mb-6 focus:scale-105 transition-all duration-300 ease-in-out"
             id="passwordOne"
             type="password"
             placeholder="Enter password"
           />
-          <label htmlFor="passwordTwo"> Re-enter password</label>
+          <label className="text-sm" htmlFor="passwordTwo">
+            {" "}
+            Re-enter password
+          </label>
           <Input
+            className="mt-3 mb-6 focus:scale-105 transition-all duration-300 ease-in-out"
             id="passwordTwo"
             type="password"
             placeholder="Enter password again"
           />
-          <Button data-next>Next</Button>
-        </CardContent>
-      </Card>
-      {/* Step Four */}
-      <Card className="w-full max-w-xs mx-auto card" data-step>
-        <CardHeader>
-          <CardTitle>Verify your phone Number</CardTitle>
-          <CardDescription>
-            This is the number you will use for cellular transactions
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <label htmlFor="phoneNumber">Enter your Phone Number</label>
-          <Input id="phoneNumber" type="number" placeholder="912 345 678" />
-          <Button className="" data-next>
+          <Button
+            className="w-full bg-[#327CEB] hover:bg-[#327CEB] transition-all duration-300 ease-in-out hover:scale-105 focus:scale-105"
+            data-next
+          >
             Next
           </Button>
         </CardContent>
-        <CardFooter>
-          <p>Verify with my email</p>
+      </Card>
+      {/* Step Four */}
+      <Card
+        className="w-full max-w-sm mx-auto card border-none shadow-none"
+        data-step
+      >
+        <CardHeader className="mb-7">
+          <CardTitle className="text-center mb-3">
+            Verify your phone Number
+          </CardTitle>
+          <CardDescription className="text-center text-xs">
+            This is the number you will use for cellular transactions
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="mb-4">
+          <label className="text-sm" htmlFor="phoneNumber">
+            Enter your Phone Number
+          </label>
+          <div className="relative mt-3 mb-6">
+            <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-black text-sm pointer-events-none z-50">
+              +234
+            </span>
+            <Input
+              className="pl-14 focus:scale-105 transition-all duration-300 ease-in-out"
+              id="phoneNumber"
+              type="number"
+              placeholder="912 345 678"
+            />
+          </div>
+          <Button
+            className="w-full bg-[#327CEB] hover:bg-[#327CEB] transition-all duration-300 ease-in-out hover:scale-105 focus:scale-105"
+            data-next
+          >
+            Send Verification Code
+          </Button>
+        </CardContent>
+        <CardFooter className="flex justify-center">
+          <p className="text-center text-xs text-[#327CEB]">
+            Verify with my email
+          </p>
         </CardFooter>
       </Card>
     </form>
