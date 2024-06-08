@@ -19,7 +19,7 @@ export function NavList() {
   }, [])
   return (
     <>
-      {pageTitle === "Sign Up Page" || pageTitle === "Login Page" ? null : (
+      {pageTitle === "Sign Up Page" || pageTitle === "Sign In Page" ? null : (
         <NavigationMenu>
           <NavigationMenuList className="hidden lg:flex space-x-4">
             <NavigationMenuItem>

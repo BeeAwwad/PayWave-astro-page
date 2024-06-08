@@ -1,0 +1,9 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import SignInForm from "../components/react/forms/signIn"
+const pageTitle = "Sign In Page"
+---
+
+<Layout title={pageTitle}>
+  <SignInForm client:load />
+</Layout>

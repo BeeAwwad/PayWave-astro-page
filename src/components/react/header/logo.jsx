@@ -3,7 +3,7 @@ function Logo() {
   const [pageTitle, setPageTitle] = useState("")
 
   const logoSrc =
-    pageTitle === "Sign Up Page" || pageTitle === "Signin Page"
+    pageTitle === "Sign Up Page" || pageTitle === "Sign In Page"
       ? "logoOne.svg"
       : "logo.svg"
 

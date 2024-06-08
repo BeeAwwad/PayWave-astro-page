@@ -141,12 +141,15 @@ function SignUpForm() {
         data-step
       >
         <CardHeader className="mb-7">
-          <CardTitle className="text-center">
+          <CardTitle className="text-center mb-3">
             Create your Paywave account
           </CardTitle>
           <CardDescription className="text-center text-xs">
             Already have an account?
-            <span className="text-[#327CEB]"> Login in</span>
+            <a href="/signIn" className="text-[#327CEB]">
+              {" "}
+              Login in
+            </a>
           </CardDescription>
         </CardHeader>
         <CardContent className="mb-6">
