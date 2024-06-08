@@ -10,6 +10,8 @@ const { title } = Astro.props
   id="navbar"
   class={`sticky top-0 left-0 z-[90] ${title === "Sign Up Page" || title === "Sign In Page" ? "text-[#002C6E] bg-white" : "text-white bg-[#002C6E]"} transition-top duration-300`}
 >
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#footer" class="skip-link">Skip to footer</a>
   <nav
     class="flex justify-between items-center px-10 lg:px-24 font-poppins shadow-md h-20 md:h-16"
   >

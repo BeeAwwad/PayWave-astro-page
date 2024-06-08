@@ -152,3 +152,21 @@
 .label {
   margin-bottom: 2rem;
 }
+
+/* Skip links */
+
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #dceaff;
+  color: #002c6e;
+  translate: 0 -100%;
+  transition: translate 200ms ease-in-out;
+}
+
+.skip-link:focus {
+  translate: 0;
+}
